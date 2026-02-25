@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Boilerplate 🐦‍🔥
 
-## Getting Started
+## 🔶 Next.js Setup
 
-First, run the development server:
+[🔗 Get Started Docs](https://nextjs.org/docs/app/getting-started/installation#create-with-the-cli)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Create a folder for your project and run this command in there
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    npx create-next-app@latest .
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔶 Shadcn UI
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Setup
 
-## Learn More
+[🔗 Installation Docs](https://ui.shadcn.com/docs/installation/next)
 
-To learn more about Next.js, take a look at the following resources:
+Run this command to initialize shadcn:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    npx shadcn@latest init
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Add New Components
 
-## Deploy on Vercel
+[🔗 Components](https://ui.shadcn.com/docs/components)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run this command to add new components:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    npx shadcn@latest add input
+    npx shadcn@latest add textarea
+    npx shadcn@latest add field
+
+## 🔶 Contact Form
+
+[🔗 Building a Form](https://ui.shadcn.com/docs/forms/react-hook-form)
+
+* Basic Form - ```app/contact/contact-form.tsx```
+* API Route - ```app/api/contact/route.ts```
+* Email template - ```app/api/contact/route.ts```
+* Environment variable - ```RESEND_API_KEY```
+
+Install Dependencies
+
+    npm install axios react-hook-form @hookform/resolvers zod resend @react-email/render @react-email/components
+
+## 🔶 Sanity CMS
+
+[🔗 Visual Editing Guide](https://www.sanity.io/docs/visual-editing/visual-editing-with-next-js-app-router)
