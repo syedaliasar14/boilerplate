@@ -2,27 +2,17 @@
 
 ## 🔶 Next.js Setup
 
-[🔗 Get Started Docs](https://nextjs.org/docs/app/getting-started/installation#create-with-the-cli)
-
-Create a folder for your project and run this command in there
+[🔗 Getting Started](https://nextjs.org/docs/app/getting-started/installation#create-with-the-cli)
 
     npx create-next-app@latest .
 
 ## 🔶 Shadcn UI
 
-### Setup
-
-[🔗 Installation Docs](https://ui.shadcn.com/docs/installation/next)
-
-Run this command to initialize shadcn:
+[🔗 Installation](https://ui.shadcn.com/docs/installation/next)
 
     npx shadcn@latest init
 
-### Add New Components
-
-[🔗 Components](https://ui.shadcn.com/docs/components)
-
-Run this command to add new components:
+[🔗 Add New Components](https://ui.shadcn.com/docs/components)
 
     npx shadcn@latest add input
     npx shadcn@latest add textarea
@@ -43,4 +33,11 @@ Install Dependencies
 
 ## 🔶 Sanity CMS
 
+[🔗 Sanity Setup](https://www.sanity.io/docs/next-js-quickstart/setting-up-your-studio)
+
+    npm create sanity@latest -- --dataset production --template clean --typescript
+
+* Add sanity image config in ```next.config.ts```
+
 [🔗 Visual Editing Guide](https://www.sanity.io/docs/visual-editing/visual-editing-with-next-js-app-router)
+
