@@ -41,3 +41,12 @@ Install Dependencies
 
 [🔗 Visual Editing Guide](https://www.sanity.io/docs/visual-editing/visual-editing-with-next-js-app-router)
 
+* Add env variables - ```SANITY_VIEWER_TOKEN``` & ```NEXT_PUBLIC_SANITY_STUDIO_URL```
+* Add stega to ```sanity/lib/client.ts```
+* Add enable draft mode API - ```api/draft-mode/enable/route.ts```
+* Add disable draft mode server action - ```action.ts```
+* Add ```disable-draft-mode.tsx``` component
+* Add ```VisualEditing``` & ```DisableDraftMode``` components to ```layout.tsx```
+* Add Presentation tool to ```sanity.config.ts```
+* Add serverToken & browserToken to ```sanity/live.ts```
+* Use sanityFetch for querying
