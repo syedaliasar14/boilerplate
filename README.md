@@ -6,6 +6,8 @@
 
     npx create-next-app@latest .
 
+* Update project instructions in AGENTS.md
+
 ## 🔶 Shadcn UI
 
 [🔗 Installation](https://ui.shadcn.com/docs/installation/next)
