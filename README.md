@@ -35,15 +35,16 @@ Install Dependencies
 
 ## 🔶 Sanity CMS
 
-[🔗 Sanity Setup](https://www.sanity.io/docs/next-js-quickstart/setting-up-your-studio)
+### [🔗 Sanity Setup](https://www.sanity.io/docs/next-js-quickstart/setting-up-your-studio)
 
     npm create sanity@latest -- --dataset production --template clean --typescript
 
 * Add sanity image config in ```next.config.ts```
 
-[🔗 Visual Editing Guide](https://www.sanity.io/docs/visual-editing/visual-editing-with-next-js-app-router)
+### [🔗 Visual Editing Guide](https://www.sanity.io/docs/visual-editing/visual-editing-with-next-js-app-router)
 
-* Add env variables - ```SANITY_VIEWER_TOKEN``` & ```NEXT_PUBLIC_SANITY_STUDIO_URL```
+* In Sanity, generate a **Viewer** API token called "Preview"
+* Add env variable - ```SANITY_API_READ_TOKEN```
 * Add stega to ```sanity/lib/client.ts```
 * Add enable draft mode API - ```api/draft-mode/enable/route.ts```
 * Add disable draft mode server action - ```action.ts```
@@ -52,3 +53,12 @@ Install Dependencies
 * Add Presentation tool to ```sanity.config.ts```
 * Add serverToken & browserToken to ```sanity/live.ts```
 * Use sanityFetch for querying
+
+### Typegen
+
+* Add this to scripts in ```package.json```
+```
+"typegen": "sanity schemas extract --path=./schema.json --enforce-required-fields && sanity typegen generate"
+```
+* Add typegen in ```sanity.cli.ts```
+* ```npm run typegen``` when you add new queries

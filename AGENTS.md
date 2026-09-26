@@ -18,3 +18,5 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ### Sanity CMS Instructions
 - Ignore this section if the request doesn't require Sanity or Sanity is not in the project
 - Add queries in sanity/queries folder and split them into files as needed
+- Try to use sanityFetch to retrieve Sanity data
+- Do ```npm run typegen``` when you add/update queries
