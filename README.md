@@ -7,6 +7,7 @@
     npx create-next-app@latest .
 
 * Update project instructions in AGENTS.md
+* Add ```config.ts```
 
 ## 🔶 Shadcn UI
 
