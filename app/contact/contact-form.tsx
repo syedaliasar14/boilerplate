@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,7 +16,7 @@ const schema = z.object({
   message: z.string().min(1, "Message is required"),
 })
 
-export default function ContactForm({ submitButtonText }: { submitButtonText?: string }) {
+export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const form = useForm<z.infer<typeof schema>>({
@@ -42,7 +43,7 @@ export default function ContactForm({ submitButtonText }: { submitButtonText?: s
   }
 
   return (
-    <form className="w-full max-w-md text-black relative z-10" onSubmit={form.handleSubmit(onSubmit)}>
+    <form className="w-full" onSubmit={form.handleSubmit(onSubmit)}>
       <FieldGroup>
 
         <Controller name="name" control={form.control} render={({ field, fieldState }) => (
@@ -71,10 +72,10 @@ export default function ContactForm({ submitButtonText }: { submitButtonText?: s
 
       </FieldGroup>
 
-      <button type="submit" className="!w-full mt-4 btn-white" disabled={isSubmitting}>
-        {isSubmitting ? "Sending..." : submitButtonText || "Send Message"}
+      <button type="submit" className="!w-full mt-4" disabled={isSubmitting}>
+        {isSubmitting ? "Sending..." : "Send"}
       </button>
-      {submitted && <p className="mt-2 text-center text-white">Message sent successfully!</p>}
+      {submitted && <p className="mt-2 text-center">Message sent successfully!</p>}
     </form>
   );
 }
