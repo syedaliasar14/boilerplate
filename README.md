@@ -27,7 +27,7 @@
 
 * Basic Form - ```app/contact/contact-form.tsx```
 * API Route - ```app/api/contact/route.ts```
-* Email template - ```app/api/contact/route.ts```
+* Email template - ```app/api/contact/template.ts```
 * Environment variable - ```RESEND_API_KEY```
 
 Install Dependencies
@@ -45,7 +45,7 @@ Install Dependencies
 ### [🔗 Visual Editing Guide](https://www.sanity.io/docs/visual-editing/visual-editing-with-next-js-app-router)
 
 * In Sanity, generate a **Viewer** API token called "Preview"
-* Add env variable - ```SANITY_API_READ_TOKEN```
+* Add env variable - ```SANITY_VIEWER_TOKEN```
 * Add stega to ```sanity/lib/client.ts```
 * Add enable draft mode API - ```api/draft-mode/enable/route.ts```
 * Add disable draft mode server action - ```action.ts```
