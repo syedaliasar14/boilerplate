@@ -47,8 +47,8 @@ Install Dependencies
 * In Sanity, generate a **Viewer** API token called "Preview"
 * Add env variable - ```SANITY_VIEWER_TOKEN```
 * Add stega to ```sanity/lib/client.ts```
-* Add enable draft mode API - ```api/draft-mode/enable/route.ts```
-* Add disable draft mode server action - ```action.ts```
+* Add enable draft mode API - ```app/api/draft-mode/enable/route.ts```
+* Add disable draft mode server action - ```app/action.ts```
 * Add ```disable-draft-mode.tsx``` component
 * Add ```VisualEditing``` & ```DisableDraftMode``` components to ```layout.tsx```
 * Add Presentation tool to ```sanity.config.ts```
