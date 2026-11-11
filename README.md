@@ -52,7 +52,7 @@ Install Dependencies
 * Add ```disable-draft-mode.tsx``` component
 * Add ```VisualEditing``` & ```DisableDraftMode``` components to ```layout.tsx```
 * Add Presentation tool to ```sanity.config.ts```
-* Add serverToken & browserToken to ```sanity/live.ts```
+* Add serverToken & browserToken to ```sanity/lib/live.ts```
 * Use sanityFetch for querying
 
 ### Typegen
@@ -63,3 +63,14 @@ Install Dependencies
 ```
 * Add typegen in ```sanity.cli.ts```
 * ```npm run typegen``` when you add new queries
+
+## 🔶 Amplify Hosting
+
+* Add this to amplify.yml in console under build commands for env variables:
+```
+    build:
+      commands:
+        - env | grep -e API_BASE_URL >> .env.production
+        - env | grep -e NEXT_PUBLIC_ >> .env.production
+        - npm run build
+```
