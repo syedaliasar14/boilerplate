@@ -54,6 +54,7 @@ Install Dependencies
 * Add Presentation tool to ```sanity.config.ts```
 * Add serverToken & browserToken to ```sanity/lib/live.ts```
 * Use sanityFetch for querying
+* Replace ```sanity/queries``` and ```sanity/schemaTypes``` folders to prefill basic site settings and home page content
 
 ### Typegen
 
