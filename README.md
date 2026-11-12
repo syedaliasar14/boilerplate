@@ -65,6 +65,12 @@ Install Dependencies
 * Add typegen in ```sanity.cli.ts```
 * ```npm run typegen``` when you add new queries
 
+### Troubleshooting
+
+* Remove SanityLive component in layout.tsx (to fix premature reloads)
+* Set useCdn to false in ```sanity/lib/client.ts``` (to fix caching issues)
+* Add ```export const revalidate = 0;``` at the page level (to fix caching issues)
+
 ## 🔶 Amplify Hosting
 
 * Add this to amplify.yml in console under build commands for env variables:
